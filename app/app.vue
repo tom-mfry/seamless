@@ -1,12 +1,14 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <HeaderBanner />
-    <NuxtPage />
+    <main class="flex-grow flex justify-center">
+      <NuxtPage />
+    </main>
   </div>
 </template>
 
 <style>
 body {
-  font-family: 'Alta', sans-serif;
+  font-family: 'Cousine', sans-serif;
 }
 </style>

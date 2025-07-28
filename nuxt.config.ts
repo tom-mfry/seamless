@@ -12,14 +12,14 @@ export default defineNuxtConfig({
   },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
   modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@nuxtjs/tailwindcss'],
   nitro: {
     preset: 'static'
   },
   fonts: {
     families: [
-      { name: 'Alta', provider: 'google' },
-      { name: 'Hello Paris', provider: 'google' },
+      { name: 'Cousine', provider: 'google' },
     ]
   }
 })

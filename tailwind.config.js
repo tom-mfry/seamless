@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Alta', 'sans-serif'],
+        sans: ['Cousine', 'sans-serif'],
         serif: ['Hello Paris', 'serif'],
       },
       letterSpacing: {

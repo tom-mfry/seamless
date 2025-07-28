@@ -9,13 +9,15 @@
       </button>
 
       <!-- Contact Button -->
-      <button class="text-gray-700 font-extralight text-sm tracking-widest py-1 px-0.5 uppercase border-b border-gray-400 transition duration-200 ease-in-out mx-8">
+      <NuxtLink to="/contact" class="text-gray-700 font-extralight text-sm tracking-widest py-1 px-0.5 uppercase border-b border-gray-400 transition duration-200 ease-in-out mx-8">
         Contact
-      </button>
+      </NuxtLink>
     </div>
     <!-- Logo -->
     <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <NuxtLink to="/">
         <NuxtImg src="/images/seamless-banner.png" alt="Seamless by Hope Logo" class="h-10" />
+      </NuxtLink>
     </div>
   </header>
 </template>
