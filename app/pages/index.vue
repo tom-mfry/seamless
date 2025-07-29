@@ -1,8 +1,10 @@
 <template>
-  <div class="relative">
-    <NuxtImg src="/images/bridal-sea.png" alt="A bride looking out at the sea" class="w-full" />
-    <div class="absolute inset-0 flex items-center justify-center">
-      <h1 class="text-white text-7xl font-serif tracking-ultra font-thin">bespoke              alterations</h1>
+  <div class="content">
+    <div class="relative">
+      <NuxtImg src="/images/bridal-sea.png" alt="A bride looking out at the sea" class="w-full" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-white text-7xl font-serif tracking-ultra font-thin">bespoke              alterations</h1>
+      </div>
     </div>
   </div>
 </template>
