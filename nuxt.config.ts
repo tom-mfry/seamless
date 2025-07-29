@@ -17,6 +17,11 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static'
   },
+  vite: {
+    server: {
+      allowedHosts: ['*.netlify.app']
+    }
+  },
   fonts: {
     families: [
       { name: 'Cousine', provider: 'google' },
