@@ -5,7 +5,7 @@
       <Meta name="description" content="Get in touch with Seamless by Hope for your bridal seamstress needs." />
     </Head>
 
-    <div class="form max-w-lg w-full text-center mx-auto">
+    <div class="form max-w-lg w-full text-center mx-auto pt-16 pb-8">
       <h1 class="text-2xl font-light tracking-widest uppercase mb-8">
         Contact Hope
       </h1>
@@ -17,7 +17,7 @@
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         @submit="handleSubmit"
-        class="space-y-6"
+        class="space-y-6 px-4 sm:px-6 lg:px-8"
       >
         <input type="hidden" name="form-name" value="contact" />
         
@@ -35,53 +35,51 @@
             name="name"
             type="text"
             required
-            class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            class="form-input"
             placeholder="Full Name"
           />
         </div>
 
-        <div class="flex items-center space-x-4">
-          <div class="w-1/2">
+          <div class="">
             <label for="email" class="sr-only">Email address</label>
             <input
               id="email"
               name="email"
               type="email"
               required
-              class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              class="form-input"
               placeholder="Email address"
             />
           </div>
-          <div class="w-1/2">
+          <div class="">
             <label for="phone" class="sr-only">Phone Number</label>
             <input
               id="phone"
               name="phone"
               type="tel"
               required
-              class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              class="form-input"
               placeholder="Phone Number"
             />
           </div>
-        </div>
 
         <ClientOnly>
-          <div>
+          <div class="pb-1">
             <label for="wedding-date" class="sr-only">Wedding Date</label>
             <date-picker
               v-model:value="weddingDate"
-              format="YYYY-MM-DD"
+              format="DD-MM-YYYY"
               value-type="format"
               placeholder="Wedding Date"
               :editable="false"
               :clearable="false"
-              input-class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              input-class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm rounded-none"
             />
             <input type="hidden" name="wedding-date" :value="weddingDate" />
           </div>
         </ClientOnly>
 
-        <div class="text-left">
+        <div class="text-center">
           <label class="text-gray-700 font-light text-sm tracking-widest uppercase">Which services do you require?</label>
           <div class="mt-4 space-y-4">
             <div class="flex items-center">
@@ -127,7 +125,7 @@
             name="message"
             rows="3"
             required
-            class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            class="form-input"
             placeholder="Tell Hope about your wedding dress and the alterations you will require. Or, ask her any question."
           ></textarea>
         </div>
@@ -138,7 +136,7 @@
             id="dress-link"
             name="dress-link"
             type="url"
-            class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            class="form-input"
             placeholder="Website link your your dress"
           />
         </div>
@@ -180,12 +178,10 @@ const handleSubmit = (event: Event) => {
 </script>
 
 <style scoped>
-  .form {
-    margin-top: 250px;
-  }
-
-  input[type="date"] {
-    color-scheme: light;
-    color: black;
-  }
+.form-input {
+  @apply appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm rounded-none;
+}
+.mx-datepicker {
+  width: 100%;
+}
 </style>
