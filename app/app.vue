@@ -7,6 +7,7 @@
         mode: 'out-in'
       }" />
     </main>
+    <TheFooter />
   </div>
 </template>
 

@@ -3,4 +3,5 @@
   src: url('/fonts/helloparisserif-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  color: oklch(27.8% 0.033 256.848);
 }

@@ -5,7 +5,7 @@
       <Meta name="description" content="Get in touch with Seamless by Hope for your bridal seamstress needs." />
     </Head>
 
-    <div class="form max-w-lg w-full text-center mx-auto pt-16 pb-8">
+    <div class="form max-w-lg w-full text-center mx-auto pt-8 pb-8">
       <h1 class="text-2xl font-light tracking-widest uppercase mb-8">
         Contact Hope
       </h1>
@@ -81,7 +81,7 @@
 
         <div class="text-center">
           <label class="text-gray-700 font-light text-sm tracking-widest uppercase">Which services do you require?</label>
-          <div class="mt-4 space-y-4">
+          <div class="mt-4 space-y-4 mx-10">
             <div class="flex items-center">
               <input 
                 id="service-steaming" 
