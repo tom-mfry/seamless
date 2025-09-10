@@ -73,3 +73,20 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Development with Docker
+
+This project is configured to run a development environment inside a Docker container, which is the recommended approach.
+
+1.  **Start the Docker development server:**
+    Run the following command from the project root. You may need to use `sudo` depending on your Docker installation.
+    ```bash
+    sudo docker compose up -d --build nuxt-dev
+    ```
+    This will start a container with a development server and hot-reloading enabled.
+
+2.  **Access the website:**
+    You can access the live development site from your computer at `http://localhost:3001`.
+
+    To access it from another device on the same network (like your phone), you will need your computer's local IP address. The URL will be:
+    `http://<your-computer-ip>:3001`
