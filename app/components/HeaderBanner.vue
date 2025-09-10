@@ -2,7 +2,7 @@
   <header class="relative sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm py-4 shadow-md" id="header">
     <div class="grid grid-cols-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <NuxtLink to="/" class="flex items-center justify-center translate-y-[-2px] col-span-4 col-start-2">
-        <span class="text-4xl font-serif text-gray-800 tracking-widest">Seamless</span>
+        <span class="text-4xl font-serif text-gray-800 tracking-widest mt-[1px]">Seamless</span>
       </NuxtLink>
 
       <!-- Desktop Nav (hidden on mobile) -->
@@ -13,7 +13,7 @@
       </nav>
 
       <!-- Mobile Menu Button (visible on mobile) -->
-      <div class="flex sm:hidden items-center justify-end col-span-2 col-start-6 pr-2">
+      <div class="flex sm:hidden items-center justify-end col-start-6 pr-2">
         <button @click="toggleMenu" class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
           <span class="sr-only">Open main menu</span>
           <svg v-if="!isMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

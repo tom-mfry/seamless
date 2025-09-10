@@ -13,7 +13,7 @@
 
 <style>
 body {
-  font-family: 'Cousine', sans-serif;
+  @apply font-sans;
 }
 .page-enter-active,
 .page-leave-active {

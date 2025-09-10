@@ -5,8 +5,8 @@
       <Meta name="description" content="Get in touch with Seamless by Hope for your bridal seamstress needs." />
     </Head>
 
-    <div class="form max-w-lg w-full text-center mx-auto pt-8 pb-8">
-      <h1 class="text-2xl font-light tracking-widest uppercase mb-8">
+    <div class="form max-w-lg w-full text-center mx-auto pt-8 pb-28">
+      <h1 class="text-xl uppercase font-light tracking-widest mt-1">
         Contact Hope
       </h1>
 
@@ -17,7 +17,7 @@
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         @submit="handleSubmit"
-        class="space-y-6 px-4 sm:px-6 lg:px-8"
+        class="space-y-6 px-8 sm:px-6 lg:px-8"
       >
         <input type="hidden" name="form-name" value="contact" />
         
@@ -65,23 +65,45 @@
 
         <ClientOnly>
           <div class="pb-1">
-            <label for="wedding-date" class="sr-only">Wedding Date</label>
+            <label for="event-date" class="sr-only">Event Date</label>
             <date-picker
-              v-model:value="weddingDate"
+              v-model:value="eventDate"
               format="DD-MM-YYYY"
               value-type="format"
-              placeholder="Wedding Date"
+              placeholder="Event Date"
               :editable="false"
               :clearable="false"
               input-class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm rounded-none"
             />
-            <input type="hidden" name="wedding-date" :value="weddingDate" />
+            <input type="hidden" name="event-date" :value="eventDate" />
           </div>
         </ClientOnly>
 
         <div class="text-center">
           <label class="text-gray-700 font-light text-sm tracking-widest uppercase">Which services do you require?</label>
-          <div class="mt-4 space-y-4 mx-10">
+          <div class="mt-4 space-y-4 mx-10 ml-6">
+            <div class="flex items-center">
+              <input 
+                id="service-bridal-alterations" 
+                name="service-bridal-alterations" 
+                type="checkbox" 
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+              >
+              <label for="service-bridal-alterations" class="ml-3 block text-sm text-gray-800">
+                Wedding Dress Alterations
+              </label>
+            </div>
+            <div class="flex items-center">
+              <input 
+                id="service-bridal-accessories" 
+                name="service-bridal-accessories" 
+                type="checkbox" 
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+              >
+              <label for="service-bridal-accessories" class="ml-3 block text-sm text-gray-800">
+                Bridal Accessories
+              </label>
+            </div>
             <div class="flex items-center">
               <input 
                 id="service-steaming" 
@@ -115,6 +137,17 @@
                 Bridesmaid Dress Alterations
               </label>
             </div>
+            <div class="flex items-center">
+              <input 
+                id="service-formal" 
+                name="service-formal" 
+                type="checkbox" 
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+              >
+              <label for="service-formal" class="ml-3 block text-sm text-gray-800">
+                Formalwear Alterations
+              </label>
+            </div>
           </div>
         </div>
 
@@ -123,10 +156,10 @@
           <textarea
             id="message"
             name="message"
-            rows="3"
+            rows="1"
             required
             class="form-input"
-            placeholder="Tell Hope about your wedding dress and the alterations you will require. Or, ask her any question."
+            placeholder="What alterations do you require?"
           ></textarea>
         </div>
 
@@ -137,7 +170,7 @@
             name="dress-link"
             type="url"
             class="form-input"
-            placeholder="Website link your your dress"
+            placeholder="Website link to your dress"
           />
         </div>
 
@@ -154,7 +187,7 @@
               </svg>
               Sending...
             </span>
-            <span v-else>Submit</span>
+            <span v-else class="uppercase tracking-widest">Submit</span>
           </button>
         </div>
       </form>

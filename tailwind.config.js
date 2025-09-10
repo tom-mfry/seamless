@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Cousine', 'sans-serif'],
+        sans: ['Red Hat Display', 'sans-serif'],
         serif: ['Hello Paris', 'serif'],
       },
       letterSpacing: {

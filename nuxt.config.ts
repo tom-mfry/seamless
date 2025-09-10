@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   fonts: {
     families: [
       { name: 'Cousine', provider: 'google' },
+      { name: 'Red Hat Display', provider: 'google' },
     ]
   }
 })
