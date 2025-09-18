@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen flex items-center justify-center">
+  <div class="w-full flex items-center justify-center">
     <div class="max-w-lg w-full text-center mx-auto">
       <div class="p-8 bg-green-50 border border-green-200 rounded-lg">
         <svg class="mx-auto h-16 w-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

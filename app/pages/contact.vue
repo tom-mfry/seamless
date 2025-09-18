@@ -17,7 +17,7 @@
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         @submit="handleSubmit"
-        class="space-y-6 px-8 sm:px-6 lg:px-8"
+        class="space-y-6 px-8 lg:px-6 lg:px-8"
       >
         <input type="hidden" name="form-name" value="contact" />
         
@@ -73,23 +73,23 @@
               placeholder="Event Date"
               :editable="false"
               :clearable="false"
-              input-class="appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm rounded-none"
+              input-class="lg:text-lg appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 rounded-none"
             />
             <input type="hidden" name="event-date" :value="eventDate" />
           </div>
         </ClientOnly>
 
         <div class="text-center">
-          <label class="text-gray-700 font-light text-sm tracking-widest uppercase">Which services do you require?</label>
+          <label class="lg:text-base text-gray-700 font-light text-sm tracking-widest uppercase">Which services do you require?</label>
           <div class="mt-4 space-y-4 mx-10 ml-6">
             <div class="flex items-center">
               <input 
                 id="service-bridal-alterations" 
                 name="service-bridal-alterations" 
                 type="checkbox" 
-                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded accent-black"
               >
-              <label for="service-bridal-alterations" class="ml-3 block text-sm text-gray-800">
+              <label for="service-bridal-alterations" class="ml-3 block text-sm lg:text-base text-gray-800">
                 Wedding Dress Alterations
               </label>
             </div>
@@ -98,9 +98,9 @@
                 id="service-bridal-accessories" 
                 name="service-bridal-accessories" 
                 type="checkbox" 
-                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded accent-black"
               >
-              <label for="service-bridal-accessories" class="ml-3 block text-sm text-gray-800">
+              <label for="service-bridal-accessories" class="ml-3 block text-sm lg:text-base text-gray-800">
                 Bridal Accessories
               </label>
             </div>
@@ -109,9 +109,9 @@
                 id="service-steaming" 
                 name="service-steaming" 
                 type="checkbox" 
-                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded accent-black"
               >
-              <label for="service-steaming" class="ml-3 block text-sm text-gray-800">
+              <label for="service-steaming" class="ml-3 block text-sm lg:text-base text-gray-800">
                 Dress Steaming
               </label>
             </div>
@@ -120,9 +120,9 @@
                 id="service-cleaning" 
                 name="service-cleaning" 
                 type="checkbox" 
-                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded accent-black"
               >
-              <label for="service-cleaning" class="ml-3 block text-sm text-gray-800">
+              <label for="service-cleaning" class="ml-3 block text-sm lg:text-base text-gray-800">
                 Wedding Dress Cleaning
               </label>
             </div>
@@ -131,9 +131,9 @@
                 id="service-bridesmaid" 
                 name="service-bridesmaid" 
                 type="checkbox" 
-                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded accent-black"
               >
-              <label for="service-bridesmaid" class="ml-3 block text-sm text-gray-800">
+              <label for="service-bridesmaid" class="ml-3 block text-sm lg:text-base text-gray-800">
                 Bridesmaid Dress Alterations
               </label>
             </div>
@@ -142,9 +142,9 @@
                 id="service-formal" 
                 name="service-formal" 
                 type="checkbox" 
-                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded"
+                class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded accent-black"
               >
-              <label for="service-formal" class="ml-3 block text-sm text-gray-800">
+              <label for="service-formal" class="ml-3 block text-sm lg:text-base text-gray-800">
                 Formalwear Alterations
               </label>
             </div>
@@ -159,7 +159,7 @@
             rows="1"
             required
             class="form-input"
-            placeholder="What alterations do you require?"
+            placeholder="Details about your desired alterations..."
           ></textarea>
         </div>
 
@@ -172,6 +172,19 @@
             class="form-input"
             placeholder="Website link to your dress"
           />
+        </div>
+
+        <div class="flex items-start py-4">
+          <input 
+            id="acknowledgement" 
+            name="acknowledgement" 
+            type="checkbox" 
+            required
+            class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded mt-1 accent-black"
+          >
+          <label for="acknowledgement" class="ml-3 block text-sm text-gray-800 text-left">
+            Hope's response email may get sent to the junk folder. I have acknowledged this and will be sure to check my junk folder
+          </label>
         </div>
 
         <div>
@@ -200,7 +213,7 @@ import { ref } from 'vue';
 import DatePicker from 'vue-datepicker-next';
 import 'vue-datepicker-next/index.css';
 
-const weddingDate = ref(new Date());
+const eventDate = ref(new Date());
 const isSubmitting = ref(false);
 
 const handleSubmit = (event: Event) => {
@@ -212,7 +225,7 @@ const handleSubmit = (event: Event) => {
 
 <style scoped>
 .form-input {
-  @apply appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm rounded-none;
+  @apply appearance-none relative block w-full px-3 py-3 border-b border-gray-300 bg-transparent placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 lg:text-lg rounded-none;
 }
 .mx-datepicker {
   width: 100%;

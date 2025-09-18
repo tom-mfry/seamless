@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-8 py-8 max-w-lg w-full text-center pt-8 pb-28 mt-14">
-    <h1 class="text-xl uppercase font-light tracking-widest mb-0">Services - Coming Soon</h1>
+    <h1 class="text-xl uppercase font-light tracking-widest mb-0">FAQ - Coming Soon</h1>
     <p class="mt-2 text-sm lg:text-lg">Our new website is currently under construction. Stay tuned for more details.</p>
     <p class="mt-10 mb-6 lg:text-lg">No need to stress though! Hope is still taking bookings for bridal and formalwear alterations.</p>
     <div class="mt-8">

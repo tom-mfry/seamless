@@ -6,7 +6,7 @@
         <!-- Location -->
         <div class="mb-6 md:mb-0">
           <p class="font-semibold uppercase tracking-widest">Location</p>
-          <p class="text-sm">Corfe Mullen, Dorset.</p>
+          <p class="text-sm">Corfe Mullen, Dorset</p>
         </div>
         
         <!-- Fitting Hours -->
@@ -16,7 +16,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="mb-6 md:mb-0">
+        <div class="md:mb-0">
           <p class="font-semibold uppercase tracking-widest">Contact</p>
           <p class="text-sm"><a href="mailto:seamlessbyhope@gmail.com" class="hover:text-black">seamlessbyhope@gmail.com</a></p>
           <div class="flex justify-center mt-1">

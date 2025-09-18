@@ -10,7 +10,10 @@ export default defineNuxtConfig({
       ]
     }
   },
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2024-07-16',
+  build: {
+    transpile: ['vue-datepicker-next'],
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@nuxtjs/tailwindcss'],
